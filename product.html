@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=V, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+
+        nav {
+            background-color:red;
+            color: white;
+            text-align: center;
+        }
+        
+        nav a {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav a:hover {
+            background-color: #555;}
+         nav li{
+                display: inline;
+                margin-right: 15px;
+            }
+           nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+            h1 {
+            background-color:red;
+            padding: 20px;
+            text-align: center;
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .product {
+            background-color: #333; /* Black background for product */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #d14624;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            
+            padding: 10px;
+            margin: 0;
+        }
+
+        p {
+            
+            padding: 10px;
+            margin: 0;
+        }
+        #add-to-cart-button {
+            background-color: #ff5733; /* Bright button color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #add-to-cart-button:hover {
+            background-color: #d14624;
+        }
+
+
+        #cart h2 {
+            background-color: red; /* Red background color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        #cart p {
+            text-align: right;
+        }
+        #cart-total {
+            font-weight: bold;
+            color: #ff5733; /* Match the "Add to Cart" button color */
+    
+        }
+        
+
+        #topButton {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff5733;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #topButton:hover {
+            background-color: #d14624;
+        }
+        #checkout-form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        #checkout-form label {
+            color: white;
+        }
+
+        #checkout-form input {
+            padding: 5px;
+        }
+        .checkout-form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .checkout-form label {
+            color: white;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .checkout-form input {
+            padding: 10px;
+            border: 1px solid #ff5733;
+            border-radius: 5px;
+        }
+
+        /* Style the payment select box */
+        .checkout-form select {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .addTocartt:hover {
+    background-color: #0056b3;
+}
+
+
+
+        </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Makeup Products</h1>
+
+    <div class="product">
+        <img src="https://i.postimg.cc/sfH2v8kN/download.jpg" alt="Lipstick">
+        <h2>Lipstick</h2>
+        <p>Price: R100</p>
+        <button onclick="addToCart('Lipstick', 100)"style="background-color: #ff5733; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://i.postimg.cc/zGZ8h100/download-1.jpg" alt="Foundation">
+        <h2>Foundation</h2>
+        <p>Price: R230</p>
+        <button onclick="addToCart('Foundation', 230)"style="background-color: #ff5733; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://i.postimg.cc/QdJCxthp/download-2.jpg" alt="Eyeshadow">
+        <h2>Eyeshadow Palette</h2>
+        <p>Price: R199.99</p>
+        <button onclick="addToCart('Eyeshadow Palette', 199.99)"style="background-color: #ff5733; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://i.postimg.cc/t4J6xzdt/images-7.jpg" alt="Eyeshadow">
+        <h2>brushes</h2>
+        <p>Price: R80</p>
+        <button onclick="addToCart('brushes', 80)"style="background-color: #ff5733; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://i.postimg.cc/6QXsF81g/images-8.jpg" alt="Eyeshadow">
+        <h2>Mascarra</h2>
+        <p>Price: R105</p>
+        <button onclick="addToCart('Mascarra', 105)"style="background-color: #ff5733; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://i.postimg.cc/KzFwzCPY/download-3.jpg" alt="Eyeshadow">
+        <h2>make up kit</h2>
+        <p>Price: R970</p>
+        <button onclick="addToCart('Makeup kit', 970)"style="background-color: #ff5733; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Add to Cart</button>
+    </div>
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be displayed here -->
+        </ul>
+        <p>Total: R<span id="cart-total">0.00</span></p>
+    </div>
+
+    <script>
+        // Initialize cart and total
+        let cart = [];
+        let total = 0.00;
+
+        // Function to add items to the cart
+        function addToCart(productName, productPrice) {
+            cart.push({ name: productName, price: productPrice });
+            total += productPrice;
+
+            // Update the cart display
+            updateCartDisplay();
+        }
+
+        // Function to update the cart display
+        function updateCartDisplay() {
+            const cartItems = document.getElementById("cart-items");
+            const cartTotal = document.getElementById("cart-total");
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartItems.appendChild(listItem);
+            });
+            cartTotal.textContent = total.toFixed(2);
+        }
+        
+    </script>
+    <div id="checkout-form">
+        <h2>Checkout</h2>
+        <form
+            action="https://formspree.io/f/xvojdnwz"
+                method="POST">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required><br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br><br>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required><br><br>
+            <label for="payment-method">Payment Method:</label>
+            <select id="payment-method" name="payment-method">
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank Transfer</option>
+            <label for="expiration-date">Expiration Date:</label>
+            <input type="text" id="expiration-date" name="expiration-date" required><br><br>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required><br><br>
+
+            <button style="background-color: #ff5733; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Place Order</button>
+        </form>
+    </div>
+
+    <a id="topButton" href="#top">Back to Top</a>
+
+    <script>
+        // JavaScript to show/hide the "Back to Top" button
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("topButton").style.display = "block";
+            } else {
+                document.getElementById("topButton").style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
