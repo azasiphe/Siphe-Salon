@@ -1,0 +1,134 @@
+body{
+    background-image: url(https://i.postimg.cc/Wzg2xP12/images-6.jpg);
+    margin: 0;
+    padding:0;
+    
+    
+    
+
+}
+nav {
+    background-color:red;
+    color: white;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: #555;}
+ nav li{
+        display: inline;
+        margin-right: 20px;
+    }
+   nav ul{
+        list-style-type: none;
+        padding: 0;
+    }
+   
+h1,h2 {
+    font-style: italic;
+    font-family: "Times New Roman", serif;
+}
+
+h1 {
+    color: rgb(255, 0, 183); 
+    padding: 10px; 
+}
+h2 {
+    color: rgb(128, 0, 105); 
+    padding: 15px;
+}
+
+p {
+    color: black(0, 26, 255); 
+    text-align: left;
+    padding: 10px; 
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+    
+
+
+
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; 
+    text-align: center;
+}
+
+.header {
+    text-align: left; /* Left-align the text within the header */
+    margin: 50px 0;
+}
+
+h1 {
+    font-size: 100px;
+    font-style: italic;
+    font-weight: bold;
+    color:white;
+    display: flex;
+   text-align:left;
+   align-items: center;
+     height: 58vh;
+     
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+     
+     
+}
+
+p {
+    font-size: 30px;
+    color:red; 
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.9;
+    font-style: italic; 
+    text-align:justify 
+}
+.view-product-button {
+    background-color: red;
+    color: #fff;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add hover effect */
+.view-product-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        nav {
+            background-color:red;
+            color: white;
+            text-align: center;
+        }
+        
+        nav a {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav a:hover {
+            background-color: #555;}
+         nav li{
+                display: inline;
+                margin-right: 15px;
+            }
+           nav ul{
+                list-style-type: none;
+                padding: 0;
+            }
+        body{
+            background-color:black;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Style the form container */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Style labels and form controls */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+h1{
+    color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #d14624;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+        </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Add Product</h1>
+
+    <form
+            action="https://formspree.io/f/xvojdnwz"
+                method="POST">
+        <label for="product_name">Product Name:</label>
+        <input type="text" id="product_name" name="product_name" required><br><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
+
+        <input type="submit" value="Add Product">
+    </form>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Siphe's Salon</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
