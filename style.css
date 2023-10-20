@@ -142,7 +142,32 @@ p {
         background-color: lightgray;
     }
 }
+@keyframes colorChange {
+    0% {
+        color: red;
+        transform: translateX(0);
+    }
+    25% {
+        color: blue;
+        transform: translateX(25%);
+    }
+    50% {
+        color: green;
+        transform: translateX(50%);
+    }
+    75% {
+        color: orange;
+        transform: translateX(75%);
+    }
+    100% {
+        color: red;
+        transform: translateX(100%);
+    }
+}
 
+#color-moving-heading {
+    animation: colorChange 5s linear infinite; /* Apply the animation to the h1 element */
+}
 
 
 
